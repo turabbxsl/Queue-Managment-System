@@ -22,14 +22,7 @@ namespace QMS.API.Controllers
             if (string.IsNullOrEmpty(request.CustomerFullName))
                 return BadRequest("Müştəri adı boş ola bilməz.");
 
-            var dto = new CreateTicketDto
-            {
-                CustomerFullName = request.CustomerFullName,
-                ServiceType = request.ServiceType,
-                CustomerType = request.CustomerType
-            };
-
-            var ticket = await _ticketService.CreateTicketAsync(dto);
+            var ticket = await _ticketService.CreateTicketAsync(request);
 
             return Ok(new
             {
