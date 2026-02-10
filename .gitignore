@@ -1,0 +1,22 @@
+# Build folders
+**/bin/
+**/obj/
+
+# VS
+*.user
+*.suo
+.vs/
+
+# Logs
+*.log
+
+# Secrets / config
+*.env
+secrets*.yaml
+values*.yaml
+
+# Others
+*.cache
+*.bak
+*.tmp
+*.backup
